@@ -33,7 +33,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'alvan/vim-closetag'
 Plugin 'rizzatti/dash.vim'
 Plugin 'tomtom/tlib_vim'
-Plugin 'endel/flashdevelop.vim'
+" Plugin 'endel/flashdevelop.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mtscout6/syntastic-local-eslint.vim'
 
