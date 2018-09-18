@@ -17,7 +17,7 @@ Plugin 'vim-scripts/AutoComplPop'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'bling/vim-airline'
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'kristijanhusak/vim-hybrid-material'
 Plugin 'tomasr/molokai'
 
 Plugin 'kien/ctrlp.vim'
@@ -33,16 +33,15 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'alvan/vim-closetag'
 Plugin 'rizzatti/dash.vim'
 Plugin 'tomtom/tlib_vim'
-" Plugin 'endel/flashdevelop.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mtscout6/syntastic-local-eslint.vim'
+Plugin 'gcorne/vim-sass-lint'
 
 call vundle#end()
 
 set background=dark
 try
-    let g:solarized_termcolors=256
-    colorscheme solarized " set colorscheme
+    colorscheme  hybrid_material
 catch /^Vim\%((\a\+)\)\=:E185/
     colorscheme desert " backup colorscheme
 endtry
@@ -54,7 +53,7 @@ set nu " display line number
 set sc " show uncomplete command
 set sm " show the match parenthesis
 set bs=2 " allow backspace to delete
-set mouse=i " allow to use mouse
+set mouse= " allow to use mouse
 
 set whichwrap=<,>,[,],b,s " allow move between lines
 set backspace=eol,start,indent " extend backspace
@@ -149,6 +148,7 @@ let g:jedi#popup_on_dot=0
 let g:syntastic_mode_map={"passive_filetypes": ["actionscript"]}
 let g:syntastic_javascript_checkers = ["eslint"]
 let g:syntastic_javascript_eslint_args = "--quiet"
+let g:syntastic_scss_checkers=["sasslint"]
 
 " spf13
 set virtualedit=onemore
@@ -156,3 +156,6 @@ cmap w!! w !sudo tee % >/dev/null
 
 set so=2
 
+" sql complete
+let g:loaded_sql_completion=0
+let g:omni_sql_no_default_maps=1
